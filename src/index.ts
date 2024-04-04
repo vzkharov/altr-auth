@@ -73,7 +73,9 @@ const AltrAuth = <User extends AltrUser, Payload extends JwtPayload = JwtPayload
 					throw new Error('Session did not exists')
 				}
 
-				const clear = current ? _redis.clearSession : _redis.clearAllSessions
+				const clear = current
+					? _redis.clearSession
+					: _redis.clearAllSessions
 
 				return !!(await clear(payload.userId, token))
 			} catch (_error) {
@@ -97,7 +99,11 @@ const AltrAuth = <User extends AltrUser, Payload extends JwtPayload = JwtPayload
 				const others = await Promise.all(promises).then((sessions) =>
 					sessions
 						.filter((_session) => !!_session)
-						.sort((it1, it2) => (it1?.iat && it2?.iat ? it2?.iat - it1?.iat : 0)),
+						.sort((it1, it2) =>
+							it1?.iat && it2?.iat
+								? it2?.iat - it1?.iat
+								: 0,
+						),
 				)
 
 				return {

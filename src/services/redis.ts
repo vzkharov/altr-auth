@@ -30,7 +30,8 @@ class Redis {
 	}
 
 	private userJwtKey = (userId: string | number) => `redis:${this.opts.prefix}:jwt:${userId}`
-	private userTotpKey = (userId: string | number) => `redis:${this.opts.prefix}:totp:${userId}`
+	private userTotpKey = (userId: string | number) =>
+		`redis:${this.opts.prefix}:totp:${userId}`
 
 	public setTotp = (userId: string, totp: string | number) =>
 		this.client.set(this.userTotpKey(userId), totp, { ex: this.opts.totpExists || 120 })

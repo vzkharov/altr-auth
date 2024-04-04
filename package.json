@@ -1,25 +1,40 @@
 {
-  "name": "@altr/auth",
-  "version": "0.1.0",
-  "private": true,
-  "main": "src/index.ts",
-  "license": "MIT",
-  "scripts": {
-    "clean": "rm -rf .turbo node_modules",
-    "lint": "eslint .",
-    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@upstash/redis": "^1.23.3",
-    "jose": "^5.2.3",
-    "otp-generator": "^4.0.1",
-    "resend": "3.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.12.4",
-    "@types/otp-generator": "^4.0.0",
-    "@types/react": "18.2.48",
-    "typescript": "^5.3.3"
-  }
+	"name": "@altr/auth",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"module": "src/index.ts",
+	"license": "MIT",
+	"scripts": {
+		"clean": "rm -rf node_modules",
+		"lint": "bunx eslint ./src/*.ts",
+		"format": "bunx prettier ./src --write",
+		"typecheck": "bunx tsc --noEmit"
+	},
+	"dependencies": {
+		"@upstash/redis": "^1.23.3",
+		"jose": "^5.2.3",
+		"otp-generator": "^4.0.1",
+		"resend": "3.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.4",
+		"@types/otp-generator": "^4.0.0",
+		"@types/react": "18.2.48",
+		"eslint": "^8.57.0",
+		"prettier": "3.2.5",
+		"typescript": "^5.3.3",
+		"@types/bun": "latest"
+	},
+	"exports": {
+		".": "./src/index"
+	},
+	"typesVersions": {
+		"*": {
+			"*": [
+				"src/*.d.ts",
+				"src/*/index.ts"
+			]
+		}
+	}
 }
