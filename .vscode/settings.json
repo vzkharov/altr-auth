@@ -1,0 +1,30 @@
+{
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+
+	"css.validate": true,
+	"prettier.configPath": ".prettierrc",
+
+	"typescript.tsdk": "5.0.4",
+	"typescript.format.enable": true,
+	"typescript.suggest.paths": true,
+
+	"tailwindCSS.hovers": true,
+	"tailwindCSS.validate": true,
+	"tailwindCSS.suggestions": true,
+	"tailwindCSS.colorDecorators": true,
+	"tailwindCSS.showPixelEquivalents": true,
+
+	"tailwindCSS.lint.invalidTailwindDirective": "error",
+	"tailwindCSS.lint.recommendedVariantOrder": "warning",
+	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "classNames", "ClassName"],
+	"tailwindCSS.experimental.classRegex": [["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]]
+}
