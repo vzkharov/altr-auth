@@ -29,12 +29,11 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-          scope: "@alterdepression"
-          registry-url: "https://npm.pkg.github.com/"
       - run: bun install --frozen-lockfile
       - run: bunx @morlay/bunpublish
         
     env:
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       
