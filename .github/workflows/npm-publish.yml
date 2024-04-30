@@ -34,4 +34,4 @@ jobs:
       - run: bun install --frozen-lockfile
       - run: yarn publish
         env:
-          NPM_CONFIG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
