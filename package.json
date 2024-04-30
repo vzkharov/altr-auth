@@ -20,7 +20,8 @@
 		"clean": "rm -rf .turbo node_modules lib",
 		"build": "bun run ./scripts/build.ts",
 		"check": "bunx @biomejs/biome check --apply ./src",
-		"format": "bunx @biomejs/biome check --apply ./src"
+		"format": "bunx @biomejs/biome check --apply ./src",
+		"prepublishOnly": "bun run build"
 	},
 	"dependencies": {
 		"@upstash/ratelimit": "^1.1.3",
