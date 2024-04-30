@@ -34,6 +34,7 @@ jobs:
       - run: bun install --frozen-lockfile
       - run: yarn publish --access public
         env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           BUN_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
