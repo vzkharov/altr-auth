@@ -30,8 +30,8 @@ jobs:
         with:
           bun-version: latest
           scope: "@alterdepression"
-          registry-url: https://registry.npmjs.org/
+          registry-url: "https://registry.npmjs.org/"
       - run: bun install --frozen-lockfile
-      - run: npm publish --access public
+      - run: yarn publish --access public
         env:
           NPM_CONFIG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
