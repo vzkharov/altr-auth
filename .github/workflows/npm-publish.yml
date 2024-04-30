@@ -32,10 +32,11 @@ jobs:
           scope: "@alterdepression"
           registry-url: "https://npm.pkg.github.com/"
       - run: bun install --frozen-lockfile && echo ${{ secrets.NPM_TOKEN }}
+      - run: bun --print process.env && bunx @morlay/bunpublish
         
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    env:
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - run: bunx @morlay/bunpublish
+      
       
