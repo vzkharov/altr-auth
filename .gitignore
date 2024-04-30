@@ -15,6 +15,7 @@ coverage
 out/
 build/
 dist/
+lib/
 
 # next.js
 .next/

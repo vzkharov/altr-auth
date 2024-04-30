@@ -4,14 +4,13 @@
 	"editor.quickSuggestions": {
 		"strings": true
 	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.defaultFormatter": "biomejs.biome",
 
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},
 
 	"css.validate": true,
-	"prettier.configPath": ".prettierrc",
 
 	"typescript.tsdk": "5.0.4",
 	"typescript.format.enable": true,
