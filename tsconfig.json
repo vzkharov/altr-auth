@@ -1,26 +1,36 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"display": "Default",
+	"display": "@altr/auth",
 	"compilerOptions": {
-		"target": "es2022",
+		"target": "ESNext",
+		"module": "CommonJS",
+		"moduleResolution": "node",
+
+		"strict": true,
+		"skipLibCheck": true,
 		"composite": false,
 		"declaration": true,
 		"declarationMap": true,
 		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
+
 		"inlineSources": false,
 		"isolatedModules": true,
-		"moduleResolution": "node",
+
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
 		"preserveWatchOutput": true,
-		"skipLibCheck": true,
-		"strict": true,
+
+		"forceConsistentCasingInFileNames": true,
+		
+		"outDir": "./lib",
 		"baseUrl": ".",
 		"paths": {
 			"~/*": ["./src/*"]
-		}
+		},
+
+		"types": ["node"],
+		"typeRoots": ["./src/types", "./node_modules/@types", "./node_modules/bun-types"]
 	},
-	"include": ["."],
-	"exclude": ["node_modules"]
+	"include": ["./src"],
+	"exclude": ["node_modules", "typings"]
 }
