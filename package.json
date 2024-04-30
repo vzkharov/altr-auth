@@ -1,5 +1,5 @@
 {
-  "name": "@altr/auth",
+  "name": "@alterdepression/auth",
   "license": "MIT",
   "version": "1.0.0",
   "author": "Vadzim Zakharov <zakharovvadzim@yandex.by>",
@@ -89,5 +89,8 @@
   "homepage": "https://github.com/vzkharov/altr-auth#readme",
   "trustedDependencies": [
     "@biomejs/biome"
-  ]
+  ],
+  "directories": {
+    "lib": "lib"
+  }
 }
