@@ -32,6 +32,9 @@ jobs:
           scope: "@alterdepression"
           registry-url: "https://npm.pkg.github.com/"
       - run: bun install --frozen-lockfile
-      - run: npm publish --access public
         env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - run: bunx lerna publish --force-publish
+      
