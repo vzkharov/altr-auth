@@ -1,12 +1,12 @@
 {
 	"name": "@alterdepression/auth",
 	"license": "MIT",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"author": "Vadzim Zakharov <zakharovvadzim@yandex.by>",
 	"description": "An utils to simplify totp-authentication impementation based on Redis & Resend and others...",
-	"main": "./nodejs.js",
-	"module": "./nodejs.mjs",
+	"main": "./lib/index.js",
 	"types": "./lib/index.d.ts",
+	"module": "./lib/index.mjs",
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
@@ -61,12 +61,12 @@
 		},
 		"./providers": {
 			"import": {
-				"types": "./lib/index.d.ts",
-				"default": "./lib/providers/index.js"
+				"types": "./lib/providers.d.ts",
+				"default": "./lib/providers.js"
 			},
 			"require": {
-				"types": "./lib/index.d.ts",
-				"default": "./lib/providers/index.js"
+				"types": "./lib/providers.d.ts",
+				"default": "./lib/providers.js"
 			}
 		}
 	},
@@ -76,7 +76,7 @@
 				"./lib/index.d.ts"
 			],
 			"./providers": [
-				"./lib/index.d.ts"
+				"./lib/providers.d.ts"
 			]
 		}
 	},
