@@ -1,7 +1,7 @@
 {
 	"name": "@alterdepression/auth",
 	"license": "MIT",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"author": "Vadzim Zakharov <zakharovvadzim@yandex.by>",
 	"description": "An utils to simplify totp-authentication impementation based on Redis & Resend and others...",
 	"main": "./lib/index.js",
@@ -16,9 +16,9 @@
 		"url": "git+https://github.com/vzkharov/altr-auth.git"
 	},
 	"scripts": {
+		"build": "tsup",
 		"test": "bun test src --coverage --timeout 5000",
 		"clean": "rm -rf .turbo node_modules lib",
-		"build": "tsup ./src && cp README.md ./lib/ && cp package.json ./lib/ && cp LICENSE ./lib/",
 		"check": "bunx @biomejs/biome check --apply ./src",
 		"format": "bunx @biomejs/biome check --apply ./src",
 		"prepublishOnly": "bun run build"
@@ -51,24 +51,12 @@
 	],
 	"exports": {
 		".": {
-			"import": {
-				"types": "./lib/index.d.ts",
-				"default": "./lib/index.js"
-			},
-			"require": {
-				"types": "./lib/index.d.ts",
-				"default": "./lib/index.js"
-			}
+			"import": "./lib/index.mjs",
+			"require": "./lib/index.js"
 		},
 		"./providers": {
-			"import": {
-				"types": "./lib/providers.d.ts",
-				"default": "./lib/providers.js"
-			},
-			"require": {
-				"types": "./lib/providers.d.ts",
-				"default": "./lib/providers.js"
-			}
+			"import": "./lib/providers.mjs",
+			"require": "./lib/providers.js"
 		}
 	},
 	"typesVersions": {
