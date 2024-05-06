@@ -1,6 +1,6 @@
 import dts from 'bun-plugin-dts'
 
-const entries = ['./src/index.ts', './src/providers/index.ts']
+const entries = ['./src/index.ts', './src/providers.ts']
 
 const build = async () => {
 	const resultEntries = await Promise.all(
