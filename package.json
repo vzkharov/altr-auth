@@ -1,7 +1,7 @@
 {
 	"name": "@alterdepression/auth",
 	"license": "MIT",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"author": "Vadzim Zakharov <zakharovvadzim@yandex.by>",
 	"description": "An utils to simplify totp-authentication impementation based on Redis & Resend and others...",
 	"main": "./lib/index.js",

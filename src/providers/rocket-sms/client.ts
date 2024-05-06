@@ -27,9 +27,19 @@ class RocketClient {
 
 		return fetch(RocketClient.getUrl('/simple/send'), {
 			method: 'POST',
-			body: JSON.stringify(body),
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+			},
+			body: new URLSearchParams(body),
 		})
 			.then((res) => res.json())
+			.then((json) => {
+				if (json?.error) {
+					throw new Error('Send error while send to the phonenumber!')
+				}
+
+				return json
+			})
 			.catch((_err) => {
 				throw new Error('Send error while send to the phonenumber!')
 			})
