@@ -21,7 +21,7 @@
 		"preserveWatchOutput": true,
 
 		"forceConsistentCasingInFileNames": true,
-		
+
 		"outDir": "./lib",
 		"baseUrl": ".",
 		"paths": {
@@ -29,7 +29,7 @@
 		},
 
 		"types": ["node"],
-		"typeRoots": ["./src/types", "./node_modules/@types", "./node_modules/bun-types"]
+		"typeRoots": ["./node_modules/@types", "./node_modules/bun-types"]
 	},
 	"include": ["./src"],
 	"exclude": ["node_modules", "typings"]
